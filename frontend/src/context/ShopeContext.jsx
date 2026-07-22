@@ -9,7 +9,7 @@ const ShopeContext = createContext();
 export { ShopeContext };
 
 const ShopeContextProvider = (props) => {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL
+  const backendUrl = 'http://localhost:4000'
 
   const [products, setProducts] = useState([])
   const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '')

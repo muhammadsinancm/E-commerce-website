@@ -18,7 +18,7 @@ import { ShopeContext } from "./context/ShopeContext";
 
 function App() {
   const {token} = useContext(ShopeContext)
-
+  
   useEffect(()=> {
  localStorage.setItem('token', token)
   }, [token])

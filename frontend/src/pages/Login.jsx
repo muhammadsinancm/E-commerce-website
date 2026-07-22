@@ -14,7 +14,6 @@ function Login() {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-    console.log(backendUrl);
 
     try {
       if (currentState === "Sign Up") {
@@ -23,6 +22,7 @@ function Login() {
           email,
           password,
         });
+
         if (responce.data.success) {
           setToken(responce.data.token);
           localStorage.setItem("token", responce.data.token);
@@ -37,7 +37,6 @@ function Login() {
 
         if (responce.data.success) {
           setToken(responce.data.token);
-          console.log(responce.config.data);
 
           localStorage.setItem("token", responce.data.token);
           console.log('done');
