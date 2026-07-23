@@ -8,9 +8,3 @@ const DB = async () => {
   await mongoose.connect(`${process.env.MONGODB_URI}/e-commerce-app`);
   
 };
-<<<<<<< HEAD
-
-export default DB;
-=======
-export default DB;
->>>>>>> 8c945cc (fix mongodb.js react import)
