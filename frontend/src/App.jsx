@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Collection from "./pages/Collection";
-import About from "./pages/about";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Prodect from "./pages/Prodect";
 import Login from "./pages/Login";
