@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { assets } from "../assets/frontend_assets/assets";
+import { ShopeContext } from "../context/ShopeContext";
 
 function Hero() {
+  
   return (
     <div className="flex flex-col sm:flex-row border border-gray-400">
       {/* Hero left side */}
@@ -22,7 +24,7 @@ function Hero() {
 
 
       {/* Hero right side */}
-     <img className="w-full sm:w-1/2" src={assets.hero_img} alt="" />
+     <img className="w-full sm:w-1/2" src={assets.image} alt="" />
     </div>
   );
 }
