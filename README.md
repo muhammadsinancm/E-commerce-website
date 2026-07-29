@@ -1,11 +1,7 @@
 E-Commerce Website
 
 > A full-stack E-Commerce web application built with the MERN Stack, providing a secure and seamless online shopping experience.
-
-Live Demo
-**Frontend:** [https://your-frontend-url.onrender.com](https://e-commerce-website-imdn.onrender.com)
-**Backend:** https://your-backend-url.onrender.com
-
+> 
 Overview
 This E-Commerce application is a full-stack online shopping platform built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js). It allows users to browse products, manage their cart, securely authenticate, place orders, and complete payments through an intuitive and responsive interface.
 
