@@ -3,6 +3,7 @@ import { ShopeContext } from '../context/ShopeContext'
 import { Link } from 'react-router-dom'
 
 function ProductItem({id, image, name, price}) {
+console.log(id);
 
  const {currency} = useContext(ShopeContext)
 

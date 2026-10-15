@@ -4,7 +4,6 @@ import { assets } from "../assets/frontend_assets/assets";
 import NewsLetterBox from "../components/NewsLetterBox";
 
 function About() {
-  console.log("about");
 
   return (
     <div>

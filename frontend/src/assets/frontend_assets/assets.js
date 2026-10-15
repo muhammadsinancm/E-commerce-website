@@ -73,6 +73,7 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import image from './Image.jpg'
 
 export const assets = {
     logo,
@@ -87,12 +88,13 @@ export const assets = {
     star_icon,
     bin_icon,
     support_img,
-    menu_icon,
+    menu_icon, 
     about_img,
     contact_img,
     razorpay_logo,
     stripe_logo,
-    cross_icon
+    cross_icon,
+    image
 }
 
 export const products = [
@@ -710,6 +712,7 @@ export const products = [
     {
         _id: "aaabz",
         name: "Men Slim Fit Relaxed Denim Jacket",
+        name: " ",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
         price: 350,
         image: [p_img52],

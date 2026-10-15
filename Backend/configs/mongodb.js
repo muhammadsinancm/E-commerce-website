@@ -1,4 +1,3 @@
-import React from "react";
 import mongoose from "mongoose";
 
 const DB = async () => {
@@ -9,5 +8,4 @@ const DB = async () => {
   await mongoose.connect(`${process.env.MONGODB_URI}/e-commerce-app`);
   
 };
-
-export default DB;
+export default DB

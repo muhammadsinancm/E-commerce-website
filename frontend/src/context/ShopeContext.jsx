@@ -1,11 +1,18 @@
 import { createContext, useEffect, useState } from "react";
-import { products } from "../assets/frontend_assets/assets";
+// import { products } from "../assets/frontend_assets/assets";
+
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const ShopeContext = createContext();
 export { ShopeContext };
+
 const ShopeContextProvider = (props) => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
+
+  const [products, setProducts] = useState([])
+  const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '')
   const currency = "$";
   const deleveryFee = 10;
   const [serch, setSerch] = useState("");
@@ -13,6 +20,20 @@ const ShopeContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
   const navigate = useNavigate();
+
+  const productListAll = async() => {
+    try {
+      const response = await axios.get(backendUrl + '/api/product/list')
+      setProducts(response.data.products)
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  useEffect(()=> {
+   productListAll()
+  }, [])
 
   const addToCart = async (itemId, size) => {
     let cartData = structuredClone(cartItems);
@@ -76,6 +97,7 @@ const ShopeContextProvider = (props) => {
 
     for (const items in cartItems) {
       const itemInfo = products.find((product) => product._id === items);
+      
       for (const item in cartItems[items]) {
         try {
           if (cartItems[items][item] > 0) {
@@ -103,7 +125,12 @@ const ShopeContextProvider = (props) => {
     getCartCout,
     updateQuantity,
     getCartAmout,
-    navigate
+    navigate,
+    backendUrl,
+    token,
+    setToken,
+    cartItems,
+    setCartItems
   };
 
   useEffect(() => {

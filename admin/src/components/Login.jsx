@@ -24,7 +24,7 @@ function Login({setToken}) {
     toast.error('error')
     
    }
-  } 
+  }
 
   return (
     <div className='min-h-screen flex items-center justify-center w-full'>
