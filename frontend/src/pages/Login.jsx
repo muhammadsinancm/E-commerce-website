@@ -5,8 +5,7 @@ import { toast } from "react-toastify";
 
 function Login() {
   const [currentState, setCurrentState] = useState("Login")
-  
-const {token, setToken, navigate, backendUrl} = useContext(ShopeContext)
+  const { token, setToken, navigate, backendUrl } = useContext(ShopeContext)
 
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
@@ -14,7 +13,6 @@ const {token, setToken, navigate, backendUrl} = useContext(ShopeContext)
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-    console.log(backendUrl);
 
     try {
       if (currentState === "Sign Up") {
@@ -23,6 +21,7 @@ const {token, setToken, navigate, backendUrl} = useContext(ShopeContext)
           email,
           password,
         });
+
         if (responce.data.success) {
           setToken(responce.data.token);
           localStorage.setItem("token", responce.data.token);
@@ -37,7 +36,6 @@ const {token, setToken, navigate, backendUrl} = useContext(ShopeContext)
 
         if (responce.data.success) {
           setToken(responce.data.token);
-          console.log(responce.config.data);
 
           localStorage.setItem("token", responce.data.token);
           console.log('done');

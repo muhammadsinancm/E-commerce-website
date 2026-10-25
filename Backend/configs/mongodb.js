@@ -8,4 +8,5 @@ const DB = async () => {
   await mongoose.connect(`${process.env.MONGODB_URI}/e-commerce-app`);
   
 };
-export default DB
+
+export default DB;
